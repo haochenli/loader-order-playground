@@ -9,5 +9,5 @@ module.exports = function(source, options) {
 module.exports.pitch = function (remainingRequest, precedingRequest, data) {
     console.log('pitch in loader3')
     // return `require('-!./src/loaders/loader4.js!./index.js')`
-
+    // return '123'
    };

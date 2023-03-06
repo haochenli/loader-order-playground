@@ -29,7 +29,7 @@ const config = {
     module: {
         rules: [
             {
-                enforce: 'post', 
+                // enforce: 'post', 
                 test: /\.js$/,
                 use: [
                     {
@@ -38,7 +38,7 @@ const config = {
                 ]
             },
             {
-                test: /\.js$/,
+                test: (path) => {return path.indexOf('js') > 0},
                 use: [
                     {
                         loader: require.resolve('./src/loaders/loader2.js'),
@@ -46,8 +46,8 @@ const config = {
                 ]
             },
             {
-                enforce: 'pre', 
-                test: /\.js$/,
+                // enforce: 'pre', 
+                test: /index/,
                 use: [
                     {
                         loader: require.resolve('./src/loaders/loader3.js'),
